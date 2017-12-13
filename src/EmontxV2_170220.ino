@@ -19,9 +19,12 @@
 SFE_BMP180 pressure;
 
 // HTU21D
-#include "SparkFunHTU21D.h"
+//#include "SparkFunHTU21D.h"
+#include "Adafruit_HTU21DF.h"
+
 //Create an instance of the object
-HTU21D htu21d;
+//HTU21D htu21d;
+Adafruit_HTU21DF htu = Adafruit_HTU21DF();
 
 //EnergyMonitor emon1;                   // Create an instance
 
@@ -98,7 +101,7 @@ void setup() {
     #ifdef DEBUG
       Serial.println(F("HTU21 init"));
     #endif
-    htu21d.begin();
+    htu.begin();
     /*
     #ifdef DEBUG
       Serial.println(F("Current sensor init"));
@@ -155,10 +158,10 @@ void loop() {
   #endif
 
   // Humidity & Temp
-  float fhum = htu21d.readHumidity();
-  float ftemp = htu21d.readTemperature();
-  emontx.hum = fhum*1000;
-  emontx.temp = ftemp*1000;
+  float fhum = htu.readHumidity();
+  float ftemp = htu.readTemperature();
+  emontx.hum = fhum*100;  // Times 100 to preserve decimals when sending an int
+  emontx.temp = ftemp*100;
   #ifdef DEBUG
     Serial.println("Hum & temp");
     Serial.println(emontx.hum);

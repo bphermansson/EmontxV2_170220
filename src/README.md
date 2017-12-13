@@ -4,16 +4,24 @@ By Patrik Hermansson
 Latest version: https://github.com/bphermansson/emontxv2
 
 Sensor for Emoncms network. This device is mounted outdoor at the electricity meter pole.
+
 Sensors used:
+
 -BMP180, air pressure/temperature, I2C.
    Code uses Sparkfuns lib for BMP180,
    https://learn.sparkfun.com/tutorials/bmp180-barometric-pressure-sensor-hookup-?_ga=1.148112447.906958391.1421739042
+
 -HTU21D, humidity/temperature, I2C. Mounted at a good(external) location.
    https://learn.sparkfun.com/tutorials/htu21d-humidity-sensor-hookup-guide/htu21d-overview
+
 - PT333-3C Phototransistor, light sensor. C to Vcc, E to A3. A3 via 470k to ground.
+
 -UVI-01 UV sensor. http://www.reyax.com/httpdocs/index.files/OTHER_Module.htm#REYAX%20UVI-01
+
 -Voltage divider on A0 reading the solar cell voltage.
+
 -Battery voltage monitored internally.
+
    http://provideyourown.com/2012/secret-arduino-voltmeter-measure-battery-voltage/)
 
 
