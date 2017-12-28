@@ -16,7 +16,7 @@ Sensors used:
 
 - PT333-3C Phototransistor, light sensor. C to Vcc, E to A3. A3 via 470k to ground.
 
--UVI-01 UV sensor. http://www.reyax.com/httpdocs/index.files/OTHER_Module.htm#REYAX%20UVI-01
+-UVI-01 UV sensor. http://www.dreamgreenhouse.com/datasheets/UVI-01-E/index.php
 
 -Voltage divider on A0 reading the solar cell voltage.
 
@@ -43,6 +43,23 @@ THIS SKETCH REQUIRES:
 
 Libraries in the standard arduino libraries folder:
 - JeeLib		https://github.com/jcw/jeelib
+
+
+D2 - RFM69CW IRQ
+D10          SEL
+D11          SDI
+D12          SDO
+D13          SCK
+
+BMP180 - I2C on A4 and A5, power + on D4
+D3 - ?
+D5 - NC
+D6 - Red Led
+D7 - NC
+D8 - NC
+D9 - NC
+
+Current sensor (removed) was on A1
 
 
  Reminder for Github:
